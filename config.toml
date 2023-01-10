@@ -2,7 +2,7 @@
 # Site Settings
 
 baseURL = "https://theyCallMeSpart.github.io/"
-title = "Hugo Theme MemE"
+title = "My personal blog."
 languageCode = "en"
 hasCJKLanguage = false
 # Copyright information (Markdown supported)
@@ -98,17 +98,17 @@ uglyURLs = false
 # Author’s information
 [author]
     # Name
-    name = "reuixiy"
+    name = "Spart"
     # Email
-    email = "reuixiy@gmail.com"
+    #email = "spart@gmail.com"
     # Motto or introduction
-    motto = "Viva La Vida"
+    #motto = ""
     # Avatar
-    avatar = "/icons/apple-touch-icon.png"
+    #avatar = "/icons/apple-touch-icon.png"
     # Personal website, default: baseURL
-    website = "https://io-oi.me/"
+    website = "https://theyCallMeSpart.github.io/"
     # Twitter
-    twitter = "reuixiy"
+    twitter = "CallMeSpart"
 
 # Related content
 [related]
@@ -363,11 +363,11 @@ uglyURLs = false
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
-    siteCreatedTime = "1969-07-20T20:17:43+00:00"
+    siteCreatedTime = "2022-12-01T20:00:00+00:00"
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "reuixiy"
+    siteTwitter = "CallMeSpart"
     # Note: used for Twitter Cards
 
 

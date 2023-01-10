@@ -1,2 +1,3 @@
 # theyCallMeSpart.github.io
-Hugo Blog
+
+My personal blog powered by Hugo.
