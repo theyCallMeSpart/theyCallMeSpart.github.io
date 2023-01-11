@@ -12,6 +12,7 @@ series = ["Hack the Box"]
 +++
 
 Hack the Box: Academy
+
 <!--more-->
 
 # Academy
@@ -220,4 +221,4 @@ b6167039363fa783151d71d4dc7a9b2a
 
 Or with a composer.json file
 
-![](../../../Attachments/academy1.png)
+![toto](/img/academy1.png)

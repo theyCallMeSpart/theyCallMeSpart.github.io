@@ -96,9 +96,9 @@ uglyURLs = false
     keepWhitespace = false
 
 # Author’s information
-[author]
+#[author]
     # Name
-    name = "Spart"
+    #name = "Spart"
     # Email
     #email = "spart@gmail.com"
     # Motto or introduction
@@ -106,9 +106,9 @@ uglyURLs = false
     # Avatar
     #avatar = "/icons/apple-touch-icon.png"
     # Personal website, default: baseURL
-    website = "https://theyCallMeSpart.github.io/"
+    #website = "https://theyCallMeSpart.github.io/"
     # Twitter
-    twitter = "CallMeSpart"
+    #twitter = "CallMeSpart"
 
 # Related content
 [related]
@@ -1145,7 +1145,7 @@ uglyURLs = false
     ######################################
     # Post Updated Badge
 
-    enablePostUpdatedBadge = true
+    #enablePostUpdatedBadge = true
 
     displayUpdatedBadge = true
     # Note: *global settings*
@@ -1197,16 +1197,15 @@ uglyURLs = false
 
     displayShareOnText = false
 
-    shareOnTwitter = true
-    shareOnFacebook = true
-    shareOnLinkedIn = true
-    shareOnTelegram = true
-    shareOnWeibo = true
-    shareOnDouban = true
-    shareOnQQ = true
-    shareOnQzone = true
-
-    shareViaQRCode = true
+    #shareOnTwitter = true
+    #shareOnFacebook = true
+    #shareOnLinkedIn = true
+    #shareOnTelegram = true
+    #shareOnWeibo = true
+    #shareOnDouban = true
+    #shareOnQQ = true
+    #shareOnQzone = true
+    #shareViaQRCode = true
 
 
     ######################################
