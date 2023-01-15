@@ -1,12 +1,14 @@
 +++
 title = "Hack the Box: Academy"
-date = 2023-01-11
+date = 2023-01-08
 description = "Hack the Box: Academy"
 tags = [
-    "Hack the Box"
+   "Hack the Box",
+   "Write-up"
 ]
 categories = [
-    "Hack the Box"
+   "Hack the Box",
+   "Write-up"
 ]
 series = ["Hack the Box"]
 +++
@@ -221,4 +223,4 @@ b6167039363fa783151d71d4dc7a9b2a
 
 Or with a composer.json file
 
-![toto](/img/academy1.png)
+![](/img/academy1.png)

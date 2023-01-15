@@ -1,12 +1,14 @@
 +++
 title = "Hack the Box: Nest"
-date = 2023-01-13
+date = 2023-01-08
 description = "Hack the Box: Nest"
 tags = [
-    "Hack the Box"
+    "Hack the Box",
+    "Write-up"
 ]
 categories = [
-    "Hack the Box"
+    "Hack the Box",
+    "Write-up"
 ]
 series = ["Hack the Box"]
 +++
@@ -205,7 +207,7 @@ End Class
 
 `Domain=nest.local Port=389 BaseOu=OU=WBQ Users,OU=Production,DC=nest,DC=local User=Administrator Password=yyEq0Uvvhq2uQOcWG8peLoeRQehqip/fKdeG/kjEVb4`
 
-AvaloniaILSpy & DnSpy
+Use AvaloniaILSpy and DnSpy
 
 ![](/img/nest1.png)
 

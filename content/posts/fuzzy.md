@@ -1,7 +1,7 @@
 +++
-title = "Hack the Box challenge: Fuzzy"
+title = "Hack the Box challenge: Fuzzy [Web]"
 date = 2023-01-10
-description = "Hack the Box challenge: Fuzzy"
+description = "Hack the Box challenge: Fuzzy [Web]"
 tags = [
     "Hack the Box",
     "Challenge"
@@ -13,10 +13,10 @@ categories = [
 series = ["Hack the Box"]
 +++
 
-Hack the Box challenge: Fuzzy
+Hack the Box challenge: Fuzzy [Web]
 <!--more-->
 
-# Fuzzy
+# Fuzzy [Web]
 
 ## Enumeration
 
