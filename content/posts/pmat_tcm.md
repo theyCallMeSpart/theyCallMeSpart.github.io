@@ -4,11 +4,13 @@ date = 2023-05-08
 description = "Practical Malware Analysis Training - TCM Security"
 tags = [
    "Malware",
-   "Training"
+   "Training",
+    "PMAT"
 ]
 categories = [
-   "malware",
-   "Training"
+   "Malware",
+   "Training",
+   "PMAT"
 ]
 series = ["PMAT"]
 +++
