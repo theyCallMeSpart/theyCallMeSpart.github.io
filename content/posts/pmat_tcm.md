@@ -5,7 +5,7 @@ description = "Practical Malware Analysis Training - TCM Security"
 tags = [
    "Malware",
    "Training",
-    "PMAT"
+   "PMAT"
 ]
 categories = [
    "Malware",
