@@ -6,16 +6,7 @@ tags = [
     "Hack the Box",
     "Write-up"
 ]
-categories = [
-    "Hack the Box",
-    "Write-up"
-]
-series = ["Hack the Box"]
 +++
-
-Hack the Box: Resolute
-
-<!--more-->
 
 # Resolute
 

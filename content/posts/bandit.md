@@ -6,16 +6,7 @@ tags = [
     "Over the Wire",
     "Write-up"
 ]
-categories = [
-    "Over the Wire",
-    "Write-up"
-]
-series = ["Over the Wire"]
 +++
-
-Over the Wire: Bandit
-
-<!--more-->
 
 # Bandit
 

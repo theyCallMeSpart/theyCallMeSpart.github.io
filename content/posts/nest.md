@@ -6,16 +6,7 @@ tags = [
     "Hack the Box",
     "Write-up"
 ]
-categories = [
-    "Hack the Box",
-    "Write-up"
-]
-series = ["Hack the Box"]
 +++
-
-Hack the Box: Nest
-
-<!--more-->
 
 # Nest
 
@@ -106,9 +97,9 @@ Let’s get back to smbclient then. `smbclient \\\\nest.htb\\DATA -U TempUser` t
 <File filename="C:\Users\C.Smith\Desktop\todo.txt" />
 ```
 
-smbclient \\10.10.10.178\Secure$ -U TempUser smb: > cd IT/Carl
+`smbclient \\10.10.10.178\Secure$ -U TempUser smb: > cd IT/Carl`
 
-smbget -rR smb://10.10.10.178/Secure$/IT/Carl -U TempUser On [https://dotnetfiddle.net/](https://dotnetfiddle.net/ "https://dotnetfiddle.net/") to get the decrypted password `C.Smith:xRxRxPANCAK3SxRxRx`
+`smbget -rR smb://10.10.10.178/Secure$/IT/Carl -U TempUser` On [https://dotnetfiddle.net/](https://dotnetfiddle.net/) to get the decrypted password `C.Smith:xRxRxPANCAK3SxRxRx`
 
 ```
 Imports System.Text

